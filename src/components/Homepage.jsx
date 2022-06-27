@@ -19,7 +19,11 @@ const Homepage = ({simplified}) => {
 
   return (
     <>
-      <Title level={2} className="heading">Global Crypto Stats</Title>
+      <div className="home-heading-container">
+        <Title level={2} className="home-title">Global Crypto Stats</Title>
+        <Title level={3} className="show-more"><Link to="/login">Login/SignUp</Link></Title>
+      </div>
+
       <Row gutter={[32, 32]}>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
         <Col span={12}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} /></Col>
